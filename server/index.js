@@ -17,6 +17,6 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.get("/", async (req, res) => res.send("Server is getting!"))
+app.get("/", async (req, res) => res.json({message: "Dockerized express server is successfully connected!"}));
 
 app.listen(port, () => console.log(`Server listening on Port - ${port}`))
